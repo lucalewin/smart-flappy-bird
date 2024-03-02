@@ -13,7 +13,7 @@ var bias;
 //------------------------------------------------------------------------------------------------------------------------------
 
 function NeuralNetwork(layer) {
-    utils =  new Utils();
+    utils = new Utils();
     
     NETWORK_LAYER_SIZES = layer;
     
@@ -27,7 +27,7 @@ function NeuralNetwork(layer) {
     //------------------------------------------------------------------------------------------------------------------------------
     for (var i = 0; i < NETWORK_SIZE; i++) {
         output[i] = [NETWORK_LAYER_SIZES[i]];
-        bias[i] = utils.createRandomArray(NETWORK_LAYER_SIZES[i], -0.5,0.7);
+        bias[i] = utils.createRandomArray(NETWORK_LAYER_SIZES[i], -0.5, 0.7);
         if(i > 0) {
             console.log("WEIGHTS");
             weights[i] = utils.createDoubleRandomArray(NETWORK_LAYER_SIZES[i], NETWORK_LAYER_SIZES[i-1], -1, 1);
@@ -52,12 +52,11 @@ function NeuralNetwork(layer) {
         return output[NETWORK_SIZE-1];
     }
     //------------------------------------------------------------------------------------------------------------------------------
+    
     this.sigmoid = function(x) {
-        var a = 1;
-        var b = 1 + Math.exp(-x);
-        var c = a / b;
-        return c;
+        return 1 / 1 + Math.exp(-x);
     }
+
     //------------------------------------------------------------------------------------------------------------------------------
     this.updateWeights = function() {
         for(var layer = 1; layer < NETWORK_SIZE; layer++) {

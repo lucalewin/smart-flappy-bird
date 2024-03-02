@@ -3,7 +3,7 @@ function Bird() {
     this.y = height / 2;
     this.gravity = 0.6;
     this.lift = -18;
-    this. velocity = 0;
+    this.velocity = 0;
     this.w = 32;
     this.h = 32;
     var layer = [4,4,1];
