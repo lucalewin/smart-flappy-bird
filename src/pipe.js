@@ -12,8 +12,9 @@ class Pipe {
 
     show() {
         image(this.bottomImage, this.x, this.bottom, this.w, this.bottomImage.size);
-        image(this.topImage, this.x, this.top - this.topImage.size, this.w, this.top);
-        rect(this.x, -100, this.w, this.top);
+        // image(this.topImage, this.x, 0, this.w, this.top);
+        image(this.topImage, this.x, -100, this.w, this.top + 100);
+        // rect(this.x, -100, this.w, this.top);
     }
 
     update() {

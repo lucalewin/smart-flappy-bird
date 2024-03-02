@@ -1,9 +1,9 @@
 class Obstacle {
-    constructor(x_, y_, img_) {
-        this.x = x_;
-        this.y = y_;
+    constructor(x, y) {
+        this.x = x;
+        this.y = y;
         this.size = 32;
-        this.img = img_;
+        this.img = loadImage("images/angryBird.png");
         this.speed = 2;
         this.gravity = 0.675;
         this.velocity = 0;

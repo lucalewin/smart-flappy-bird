@@ -103,7 +103,7 @@ function restart() {
     score = 0;
 
     pipes.push(new Pipe(bottomPipeImage, topPipeImage));
-    obstacles.push(new Obstacle(pipes[pipes.length -1].x + pipes[pipes.length -1].w + 150, height / 2, angryBirdImage));
+    obstacles.push(new Obstacle(pipes[pipes.length -1].x + pipes[pipes.length -1].w + 150, height / 2));
 
     if (automated) {
         if (bestBird == undefined) {

@@ -42,7 +42,6 @@ function setup() {
 //-------------------------------------------------------
 
 function draw() {
-
     background(39, 198, 216);
 
     if (!start_) {
@@ -132,14 +131,14 @@ function draw() {
 
     //------------------------------------------
 
-    //FPS counter
+    // FPS counter
     thisLoop = new Date();
     fps = 1000 / (thisLoop - lastLoop);
     lastLoop = thisLoop;
 
     //------------------------------------------
 
-    //Display all infos
+    // display all infos
     textSize(50);
     fill(0);
     text(score, width / 2, height / 3);
@@ -149,5 +148,4 @@ function draw() {
     text('Birds: ' + birds.length, 2.5, 40);
 
     birds[0].show();
-    
 }
